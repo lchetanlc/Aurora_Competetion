@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Competetions @Aurora Lpu</title>
+    <link rel="icon" href="favicon.png">
+    <script src="https://kit.fontawesome.com/12f1d3013b.js" crossorigin="anonymous"></script>
+    
+    <style>
+        body{
+            font-family: "Poppins", sans-serif;
+        }
+        header {
+            background: url("https://competitions.auroralpu.in/assets/images/header-bg.jpg");
+            height: 100vh;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+        }
+        nav.sticky{
+            background-color: blue;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            padding: 20px;
+            position: fixed;
+            
+
+        }
+        nav a:hover{
+            border-bottom: 3px solid white;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+            text-decoration: none;
+            margin-left: 390px;
+            margin-top: auto;
+        }
+
+        nav ul a {
+            text-decoration: none;
+            color: black;
+            font-size: 2rem;
+        }
+
+        nav .btn {
+            border-radius: 20px;
+            font-size: 2rem;
+            padding-left: 20px;
+            padding-right: 20px;
+            background-color: white;
+            color: blue;
+            border: none;
+        }
+        .mid{
+            display: flex;
+            justify-content: center;
+            margin-top: 7pc;
+            align-items:flex-start ;
+            margin-bottom: 4pc;
+            
+        }
+        .mid .content{
+            width: 500px;
+            padding-left: 20px;
+            line-height: 1.5;
+            margin-top: -40px;
+        }
+        .mid h1{
+            font-size: 50px;
+        }
+        .mid p{
+            
+        }
+        .bottom{
+            background-color: #f5f8ff;
+            padding: 20px;
+        }
+        .join{
+            
+
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            margin-top: 2pc;
+            gap: -10px;
+         
+          
+        }
+        .join h1{
+            font-size: 50px;
+
+        }
+        .join p{
+            font-size: 20px;
+            color: #777777;
+        }
+        .cards{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+
+        }
+        .card{
+            line-height: 1.5;
+            border-radius: 0px 40px 0px 40px;
+            background-color: white;
+            border: none;
+            width: 300px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 12px 16px 11px -3px rgba(0,0,0,0.21);
+            margin-bottom: 3pc;
+            transition: 1s;
+            
+           
+        }
+        .card[data-scroll="in"]
+{
+   transform: rotateX(120deg);
+}
+        .card h1{
+            font-size: 100px;
+            font-weight: 600;
+            opacity: 0.08;
+        }
+        .card-hov:hover{
+            opacity: 0;
+            transition: opacity 1.5s 0s ease-in-out;
+        }
+        .registration{
+            margin-top: 5pc;
+            text-align: center;
+            margin-bottom: 19pc;
+        }
+        .registration h1{
+            font-size: 50px;
+        }
+        .registration p{
+            width: 600px;
+            font-size: 15px;
+            margin: auto;
+            color: #777777;
+        }
+        .events{
+            text-align: center;
+        }
+        .events h1{
+            font-size: 50px;
+        }
+        .events p{
+            width: 600px;
+            font-size: 15px;
+            margin: auto;
+            color: #777777;
+        }
+       .pricing{
+          
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+           width: 310px;
+           margin: auto;
+           margin-top: 3pc;
+           border: 3px solid rgba(24, 99, 255, 0.1);
+           padding-bottom: 10px;
+       }
+       .pricing h1{
+           font-size: 30px;
+           text-align: center;
+       }
+       .p-img{
+           background: url(https://competitions.auroralpu.in/assets/images/pricing-bg.jpg);
+           padding: 30px;
+           background-position: center;
+           background-repeat: no-repeat;
+           background-size: cover;
+       }
+       .pricing button{
+           padding: 10px;
+           padding-left: 20px;
+           padding-right: 20px;
+           color: blue;
+           background-color: white;
+           border-radius: 50px;
+       }
+
+       .first-id{
+           display: flex;
+           flex-direction: row;
+           align-items: center;
+           gap: 30px;
+       }
+       .first-id p{
+font-size: 20px;
+       }
+       .form{
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           margin-top: 4pc;
+           padding: 20px;
+       }
+       .right-side input{
+           font-size: 30px;
+           padding: 10px;
+           
+       }
+       .left-side h1{
+           font-size: 50px;
+       }
+        .input-form-1{
+            display: flex;
+            gap: 40px;
+            
+            margin-left: 40px;
+            margin-top: 3pc;
+            
+            
+            
+        }
+        .input-form-2{
+            display: grid;
+            grid-template-columns: 400px 400px;
+            gap: 40px;
+            margin-left: 40px;
+            margin-top: 2pc;
+
+        }
+        .right-side textarea{
+            width: 800px;
+            height: 150px;
+            font-size: 30px;
+            padding: 10px;
+            
+        }
+footer{
+    display: flex;
+    justify-content: right;
+    padding: 50px;
+    margin-top: 5pc;
+    background: url(https://competitions.auroralpu.in/assets/images/footer.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.social-icons{
+    display: flex;
+    gap: 20px;
+   
+}
+ ul{
+    list-style: none;
+
+}
+.social-icons ul{
+    margin-left: -50px;
+}
+.social-icons a{
+    text-decoration: none;
+    list-style: none;
+    background-color: blue;
+    color:white;
+    font-size: 20px;
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    
+}
+.social-icons a:hover{
+    background-color: white;
+    color: blue;
+}
+.footer-right{
+    width: 400px;
+    margin: auto;
+}
+.footer-left{
+    width: 300px;
+    margin: auto;
+}
+    </style>
+</head>
+
+<body onscroll="myfunction()">
+    <header>
+        <nav class="navigate">
+            <div class="logo">
+                <img src="logo.png">
+            </div>
+            <div class="nav-bar">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Registration</a></li>
+                    <li><a href="">Upcoming Events</a></li>
+                    <li><a href="">Contact</a></li>
+                    <button class="btn">Register Now</button>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="mid">
+        <div class="indian-army">
+            <img height="500px" width="600px" src="indian-army.png">
+        </div>
+        <div class="content">
+            <h1>About Quizzora
+            </h1>
+            <h3 style="font-size: 30px;">Quiz Competition
+            </h3>
+            <p>Organised By:-
+            Abantika Chandra</p>
+            <p style="">Student organization AURORA, under the aegis of Division of Student Welfare, Lovely Professional
+                University, came up with a scintillating quiz competition Quizzora. ‘QUIZZORA’ is an online quiz
+                competition which is going to be conducted on a quiz portal. This quiz will be having a questionnaire of
+                India, Freedom and Independence related customs. Taking this event as an opportunity to raise a bit
+                awareness among public regarding few facts of independent India, simultaneously to entertain them, we
+                are here with the event Quizzora. Hope you participate with utmost enthusiasm and Good Luck!</p>
+            <p><span style="font-size: 40px; color: blue;">14<span style=" top: -15px;position: relative; font-size: 20px;">th</span></span> August 2021</p>    
+
+
+        </div>
+    </div>
+<div class="bottom">
+    <div class="join">
+        <h1>Why Should You Join?</h1>
+        <p>Here are some of the key reasons to participate in Quizzora. Read it and <br>think twice before ignoring. Hopefully you're going to REGISTER NOW.</p>
+    </div>
+
+
+    <div class="cards">
+        <div class="card">
+            <div class="card-hov">
+            <h1 style="margin-top: -30px;">01</h1>
+            <h3 style="margin-top: -50px; font-size: 30px;">Boost Confidence</h3>
+            <p style="color: #777777;">Well targeted, tailor-made quizzes can boost self esteem and confidence. When pupils challenge themselves but are able to succeed, their confidence can grow</p>
+        </div>
+        </div>
+        <div class="card">
+            <div class="card-hov">
+            <h1 style="margin-top: -30px;">02</h1>
+            <h3 style="margin-top: -50px; font-size: 30px;">Scope of Learning</h3>
+            <p style="color: #777777;">Since questions are based out-of-syllabus and require critical thinking and extensive research, students get into the habit of innovative learning automatically.</p>
+        </div>
+        </div>
+        <div class="card">
+            <div class="card-hov">
+            <h1 style="margin-top: -30px;">03</h1>
+            <h3 style="margin-top: -50px; font-size: 30px;">Quizzes are Fun</h3>
+            <p style="color: #777777;">Simple as that – they are fun. We all know that if learning is fun, we learn better. A quiz can be a few minutes of relaxation from our busy schedule of study.</p>
+        </div>
+        </div>
+    </div>
+    </div>
+    <div class="registration">
+        <h1>FREE REGISTRATION</h1>
+        <p>What are you waiting for ??? Don't hesitate. Register now as early as possible. And don't forget to accept the option for getting latest updates.</p>
+    </div>
+    <div class="events">
+        <h1>UPCOMING EVENTS</h1>
+        <p>Okayyyy!!!!! Here is the information regarding our upcoming event. Check it out and decide is the event right for you.</p>
+        </div>
+
+        <div class="pricing">
+            <h1>PHOTOGRAPHY CONTEST</h1>
+            <p class="p-img">19th August</p>
+            <p>Online Competetion</p>
+            <p>Comfort From Your Home</p>
+            <p>e-Cerificate will be provided</p>
+            <button >REGISTER NOW</button>
+            
+        </div>
+    <div class="form">
+        <div class="left-side">
+            <h1>GET IN TOUCH</h1>
+            <div class="first-id">
+                <i style="font-size: 30px; background-color: blue; border-radius: 50%; padding: 20px; color: white;" class="fa fa-envelope-o" aria-hidden="true"></i>
+                <p>Email Address<br>
+                 <b>info@auroralpu.in</b></p>
+            </div>
+            <div class="first-id">
+                <i style="font-size: 30px; background-color: blue; border-radius: 50%; padding: 20px; color: white;" class="fa fa-phone" aria-hidden="true"></i>
+                <p>Phone Number<br>
+                 <b>+91 8008725069</b></p>
+            </div>
+            <div class="first-id">
+                <i style="font-size: 30px; background-color: blue; border-radius: 50%; padding: 20px; color: white;" class="fa fa-link" aria-hidden="true"></i>
+                <p>Official Website<br>
+                 <b>www.auroralpu.in</b></p>
+            </div>
+        </div>
+
+        <div class="right-side">
+            <div class="input-form-1">
+                <div class="input-1">
+                <input placeholder="Your Name" type="text">
+            </div>
+            <div class="input-2">
+                <input placeholder="Your Email" type="text" >
+            </div>
+            </div>
+
+            <div class="input-form-2">
+                <div class="input-1">
+                <input placeholder="Your Subject" type="text">
+            </div>
+            <div class="input-2">
+                <input placeholder="Phone Number" type="text" >
+            </div>
+            <textarea placeholder="Your Message"></textarea>
+            
+           
+</div>
+      </div>  
+    </div>
+
+    <footer>
+   
+        <div class="footer-left">
+            <h1>Official Location</h1>
+            <p>Lovely Professional University, Jalandhar, Punjab, India</p>
+            <a>Join Our Comunity</a>
+
+        </div>
+
+        <div class="footer-right">
+<h1>FOLLOW OUR SOCIAL MEDIA HANDLES</h1>
+<p>Don't miss a incredible thing! Receive daily news by connecting to our social media handles and talk to each other anytime.</p>
+<ul class="social-icons">
+    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+
+</ul>
+
+        </div>
+    </footer>
+<script type="text/javascript" >
+window.addEventListener("scroll",function(){
+    var nav=document.querySelector("nav");
+    nav.classList.toggle("sticky",window.scrollY > 0)
+})
+    
+</script>
+</body>
+
+</html>
